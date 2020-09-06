@@ -202,7 +202,7 @@ so:episodeOf rdf:type owl:ObjectProperty ;
              owl:inverseOf so:hasEpisode ;
              rdf:type owl:FunctionalProperty ;
              rdfs:domain bbc-po:Episode ;
-             rdfs:range bbc-po:Series ;
+             rdfs:range bbc-po:Season ;
              rdfs:comment "Relazione tra un episodio e la stagione di cui fa parte"@it ;
              rdfs:label "episodeOf"@en .
 
@@ -227,7 +227,7 @@ so:firstEpisodeOf rdf:type owl:ObjectProperty ;
                   rdf:type owl:FunctionalProperty ,
                            owl:InverseFunctionalProperty ;
                   rdfs:domain bbc-po:Episode ;
-                  rdfs:range bbc-po:Series ;
+                  rdfs:range bbc-po:Season ;
                   rdfs:comment "Relazione inversa di hasFirstEpisode"@it ;
                   rdfs:label "firstEpisodeOf"@en .
 
@@ -239,7 +239,7 @@ so:firstSeasonOf rdf:type owl:ObjectProperty ;
                  owl:inverseOf so:hasFirstSeason ;
                  rdf:type owl:FunctionalProperty ,
                           owl:InverseFunctionalProperty ;
-                 rdfs:domain bbc-po:Series ;
+                 rdfs:domain bbc-po:Season ;
                  rdfs:range so:TvSeries ;
                  rdfs:comment "Relazione inversa di hasFirstSeason"@it ;
                  rdfs:label "firstSeasonOf"@en .
@@ -261,8 +261,8 @@ so:followsSeason rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf sequence:follows ;
                  owl:inverseOf so:precedesSeason ;
                  rdf:type owl:TransitiveProperty ;
-                 rdfs:domain bbc-po:Series ;
-                 rdfs:range bbc-po:Series ;
+                 rdfs:domain bbc-po:Season ;
+                 rdfs:range bbc-po:Season ;
                  rdfs:comment "Relazione tra una stagione e un'altra precedente ad essa.."@it ;
                  rdfs:label "followsSeason"@en .
 
@@ -312,7 +312,7 @@ Inversa di editionOf"""@it ;
 so:hasEpisode rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf bag:hasItem ;
               rdf:type owl:InverseFunctionalProperty ;
-              rdfs:domain bbc-po:Series ;
+              rdfs:domain bbc-po:Season ;
               rdfs:range bbc-po:Episode ;
               rdfs:comment "Relazione tra una stagione e un episodio"@it ;
               rdfs:label "hasEpisode"@en .
@@ -324,7 +324,7 @@ so:hasFirstEpisode rdf:type owl:ObjectProperty ;
                                       so:hasEpisode ;
                    rdf:type owl:FunctionalProperty ,
                             owl:InverseFunctionalProperty ;
-                   rdfs:domain bbc-po:Series ;
+                   rdfs:domain bbc-po:Season ;
                    rdfs:range bbc-po:Episode ;
                    rdfs:comment "Relazione tra una stagione e il suo primo episodio"@it ;
                    rdfs:label "hasFirstEpisode"@en .
@@ -337,7 +337,7 @@ so:hasFirstSeason rdf:type owl:ObjectProperty ;
                   rdf:type owl:FunctionalProperty ,
                            owl:InverseFunctionalProperty ;
                   rdfs:domain so:TvSeries ;
-                  rdfs:range bbc-po:Series ;
+                  rdfs:range bbc-po:Season ;
                   rdfs:comment "Relazione tra una serie e la sua prima stagione"@it ;
                   rdfs:label "hasFirstSeason"@en .
 
@@ -349,7 +349,7 @@ so:hasLastEpisode rdf:type owl:ObjectProperty ;
                   owl:inverseOf so:lastEpisodeOf ;
                   rdf:type owl:FunctionalProperty ,
                            owl:InverseFunctionalProperty ;
-                  rdfs:domain bbc-po:Series ;
+                  rdfs:domain bbc-po:Season ;
                   rdfs:range bbc-po:Episode ;
                   rdfs:comment "Relazione tra una stagione e il suo ultimo episodio"@it ;
                   rdfs:label "hasLastEpisode"@en .
@@ -363,7 +363,7 @@ so:hasLastSeason rdf:type owl:ObjectProperty ;
                  rdf:type owl:FunctionalProperty ,
                           owl:InverseFunctionalProperty ;
                  rdfs:domain so:TvSeries ;
-                 rdfs:range bbc-po:Series ;
+                 rdfs:range bbc-po:Season ;
                  rdfs:comment "Relazione tra una serie e la sua ultima stagione"@it ;
                  rdfs:label "hasLastSeason"@en .
 
@@ -392,8 +392,8 @@ so:hasNextSeason rdf:type owl:ObjectProperty ;
                           owl:InverseFunctionalProperty ,
                           owl:AsymmetricProperty ,
                           owl:IrreflexiveProperty ;
-                 rdfs:domain bbc-po:Series ;
-                 rdfs:range bbc-po:Series ;
+                 rdfs:domain bbc-po:Season ;
+                 rdfs:range bbc-po:Season ;
                  rdfs:comment "Relazione tra una stagione e quella immediatemente successiva"@it ;
                  rdfs:label "hasNextSeason"@en .
 
@@ -420,8 +420,8 @@ so:hasPreviousSeason rdf:type owl:ObjectProperty ;
                               owl:InverseFunctionalProperty ,
                               owl:AsymmetricProperty ,
                               owl:IrreflexiveProperty ;
-                     rdfs:domain bbc-po:Series ;
-                     rdfs:range bbc-po:Series ;
+                     rdfs:domain bbc-po:Season ;
+                     rdfs:range bbc-po:Season ;
                      rdfs:comment "Relazione tra una stagione e quella immediatemente precedente"@it ;
                      rdfs:label "hasPreviousSeason"@en .
 
@@ -446,7 +446,7 @@ so:hasSeason rdf:type owl:ObjectProperty ;
              owl:inverseOf so:seasonOf ;
              rdf:type owl:InverseFunctionalProperty ;
              rdfs:domain so:TvSeries ;
-             rdfs:range bbc-po:Series ;
+             rdfs:range bbc-po:Season ;
              rdfs:comment "Relazione tra una serie tv e una stagione"@it ;
              rdfs:label "hasSeason"@en .
 
@@ -458,7 +458,7 @@ so:lastEpisodeOf rdf:type owl:ObjectProperty ;
                  rdf:type owl:FunctionalProperty ,
                           owl:InverseFunctionalProperty ;
                  rdfs:domain bbc-po:Episode ;
-                 rdfs:range bbc-po:Series ;
+                 rdfs:range bbc-po:Season ;
                  rdfs:comment "Relazione inversa di hasLastEpisode"@it ;
                  rdfs:label "lastEpisodeOf"@en .
 
@@ -469,7 +469,7 @@ so:lastSeasonOf rdf:type owl:ObjectProperty ;
                                    so:seasonOf ;
                 rdf:type owl:FunctionalProperty ,
                          owl:InverseFunctionalProperty ;
-                rdfs:domain bbc-po:Series ;
+                rdfs:domain bbc-po:Season ;
                 rdfs:range so:TvSeries ;
                 rdfs:comment "Relazione inversa di hasLastSeason"@it ;
                 rdfs:label "lastSeasonOf"@en .
@@ -510,8 +510,8 @@ so:precedesEpisode rdf:type owl:ObjectProperty ;
 so:precedesSeason rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf sequence:precedes ;
                   rdf:type owl:TransitiveProperty ;
-                  rdfs:domain bbc-po:Series ;
-                  rdfs:range bbc-po:Series ;
+                  rdfs:domain bbc-po:Season ;
+                  rdfs:range bbc-po:Season ;
                   rdfs:comment "Relazione tra una stagione e un'altra successiva ad essa."@it ;
                   rdfs:label "precedesSeason"@en .
 
@@ -579,7 +579,7 @@ so:reviewWrittenBy rdf:type owl:ObjectProperty ;
 so:seasonOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf bag:itemOf ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain bbc-po:Series ;
+            rdfs:domain bbc-po:Season ;
             rdfs:range so:TvSeries ;
             rdfs:comment "Relazione tra una stagione e la serie di cui fa parte"@it ;
             rdfs:label "seasonOf"@en .
@@ -803,7 +803,7 @@ so:title rdf:type owl:DatatypeProperty ;
 so:totalEpisodes rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( bbc-po:Series
+                               owl:unionOf ( bbc-po:Season
                                              so:TvSeries
                                            )
                              ] ;
@@ -989,8 +989,8 @@ bbc-po:Programme rdf:type owl:Class ;
                  rdfs:label "Programme"@en .
 
 
-###  http://purl.org/ontology/po/Series
-bbc-po:Series rdf:type owl:Class ;
+###  http://purl.org/ontology/po/Season
+bbc-po:Season rdf:type owl:Class ;
               rdfs:subClassOf bbc-po:Programme ;
               rdfs:comment "Stagione di una serie TV" ;
               rdfs:label "Season"@en .
@@ -2404,7 +2404,7 @@ so:Zazie_Beetz rdf:type owl:NamedIndividual ;
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( bbc-po:Episode
-                bbc-po:Series
+                bbc-po:Season
                 so:Film
                 so:TvSeries
               )
@@ -2582,15 +2582,15 @@ so:w rdf:type swrl:Variable .
                                                  swrl:argument2 <http://www.semanticweb.org/gaetano/ontologies/edition>
                                                ] ;
                                      rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:ClassAtom ;
-                                                            swrl:classPredicate bbc-po:Series ;
-                                                            swrl:argument1 <http://www.semanticweb.org/gaetano/ontologies/show>
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate so:wonFor ;
+                                                            swrl:argument1 <http://www.semanticweb.org/gaetano/ontologies/aw> ;
+                                                            swrl:argument2 <http://www.semanticweb.org/gaetano/ontologies/show>
                                                           ] ;
                                                 rdf:rest [ rdf:type swrl:AtomList ;
-                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                       swrl:propertyPredicate so:wonFor ;
-                                                                       swrl:argument1 <http://www.semanticweb.org/gaetano/ontologies/aw> ;
-                                                                       swrl:argument2 <http://www.semanticweb.org/gaetano/ontologies/show>
+                                                           rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                       swrl:classPredicate bbc-po:Season ;
+                                                                       swrl:argument1 <http://www.semanticweb.org/gaetano/ontologies/show>
                                                                      ] ;
                                                            rdf:rest rdf:nil
                                                          ]

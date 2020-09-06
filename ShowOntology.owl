@@ -289,7 +289,7 @@ Inversa di directedBy</rdfs:comment>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#hasEpisode"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/ontology/po/Episode"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra un episodio e la stagione di cui fa parte</rdfs:comment>
         <rdfs:label xml:lang="en">episodeOf</rdfs:label>
     </owl:ObjectProperty>
@@ -321,7 +321,7 @@ Inversa di directedBy</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/ontology/po/Episode"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione inversa di hasFirstEpisode</rdfs:comment>
         <rdfs:label xml:lang="en">firstEpisodeOf</rdfs:label>
     </owl:ObjectProperty>
@@ -336,7 +336,7 @@ Inversa di directedBy</rdfs:comment>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#hasFirstSeason"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
         <rdfs:comment xml:lang="it">Relazione inversa di hasFirstSeason</rdfs:comment>
         <rdfs:label xml:lang="en">firstSeasonOf</rdfs:label>
@@ -364,8 +364,8 @@ Inversa di directedBy</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#precedesSeason"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e un&apos;altra precedente ad essa..</rdfs:comment>
         <rdfs:label xml:lang="en">followsSeason</rdfs:label>
     </owl:ObjectProperty>
@@ -433,7 +433,7 @@ Inversa di editionOf</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#hasEpisode">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:range rdf:resource="http://purl.org/ontology/po/Episode"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e un episodio</rdfs:comment>
         <rdfs:label xml:lang="en">hasEpisode</rdfs:label>
@@ -448,7 +448,7 @@ Inversa di editionOf</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#hasEpisode"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:range rdf:resource="http://purl.org/ontology/po/Episode"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e il suo primo episodio</rdfs:comment>
         <rdfs:label xml:lang="en">hasFirstEpisode</rdfs:label>
@@ -464,7 +464,7 @@ Inversa di editionOf</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra una serie e la sua prima stagione</rdfs:comment>
         <rdfs:label xml:lang="en">hasFirstSeason</rdfs:label>
     </owl:ObjectProperty>
@@ -479,7 +479,7 @@ Inversa di editionOf</rdfs:comment>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#lastEpisodeOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:range rdf:resource="http://purl.org/ontology/po/Episode"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e il suo ultimo episodio</rdfs:comment>
         <rdfs:label xml:lang="en">hasLastEpisode</rdfs:label>
@@ -496,7 +496,7 @@ Inversa di editionOf</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra una serie e la sua ultima stagione</rdfs:comment>
         <rdfs:label xml:lang="en">hasLastSeason</rdfs:label>
     </owl:ObjectProperty>
@@ -531,8 +531,8 @@ Inversa di editionOf</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e quella immediatemente successiva</rdfs:comment>
         <rdfs:label xml:lang="en">hasNextSeason</rdfs:label>
     </owl:ObjectProperty>
@@ -565,8 +565,8 @@ Inversa di editionOf</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e quella immediatemente precedente</rdfs:comment>
         <rdfs:label xml:lang="en">hasPreviousSeason</rdfs:label>
     </owl:ObjectProperty>
@@ -600,7 +600,7 @@ Inversa di editionOf</rdfs:comment>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#seasonOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra una serie tv e una stagione</rdfs:comment>
         <rdfs:label xml:lang="en">hasSeason</rdfs:label>
     </owl:ObjectProperty>
@@ -615,7 +615,7 @@ Inversa di editionOf</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/ontology/po/Episode"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione inversa di hasLastEpisode</rdfs:comment>
         <rdfs:label xml:lang="en">lastEpisodeOf</rdfs:label>
     </owl:ObjectProperty>
@@ -629,7 +629,7 @@ Inversa di editionOf</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#seasonOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
         <rdfs:comment xml:lang="it">Relazione inversa di hasLastSeason</rdfs:comment>
         <rdfs:label xml:lang="en">lastSeasonOf</rdfs:label>
@@ -682,8 +682,8 @@ Inversa di playedBy</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#precedesSeason">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e un&apos;altra successiva ad essa.</rdfs:comment>
         <rdfs:label xml:lang="en">precedesSeason</rdfs:label>
     </owl:ObjectProperty>
@@ -775,7 +775,7 @@ Inversa di productedBy</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#seasonOf">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Series"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/po/Season"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
         <rdfs:comment xml:lang="it">Relazione tra una stagione e la serie di cui fa parte</rdfs:comment>
         <rdfs:label xml:lang="en">seasonOf</rdfs:label>
@@ -1091,7 +1091,7 @@ Nel caso della tv viene indicato la rete televisiva.</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/po/Series"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/po/Season"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1356,9 +1356,9 @@ Nel caso della tv viene indicato la rete televisiva.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/ontology/po/Series -->
+    <!-- http://purl.org/ontology/po/Season -->
 
-    <owl:Class rdf:about="http://purl.org/ontology/po/Series">
+    <owl:Class rdf:about="http://purl.org/ontology/po/Season">
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/po/Programme"/>
         <rdfs:comment>Stagione di una serie TV</rdfs:comment>
         <rdfs:label xml:lang="en">Season</rdfs:label>
@@ -3248,7 +3248,7 @@ Parasite is about a wealthy Korean family in a modern-day Downton Abbey upstairs
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.org/ontology/po/Episode"/>
-            <rdf:Description rdf:about="http://purl.org/ontology/po/Series"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/po/Season"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#Film"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#TvSeries"/>
         </owl:members>
@@ -3545,9 +3545,10 @@ Parasite is about a wealthy Korean family in a modern-day Downton Abbey upstairs
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://purl.org/ontology/po/Series"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gaetano/ontologies/show"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#wonFor"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gaetano/ontologies/aw"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gaetano/ontologies/show"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3555,10 +3556,9 @@ Parasite is about a wealthy Korean family in a modern-day Downton Abbey upstairs
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gaetano/ontologies/ShowOntology#wonFor"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gaetano/ontologies/aw"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gaetano/ontologies/show"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://purl.org/ontology/po/Season"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gaetano/ontologies/show"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
